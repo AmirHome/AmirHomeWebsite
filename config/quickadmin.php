@@ -20,6 +20,7 @@ return [
     // Default home route
     'homeRoute'          => 'admin',
     // Default role to access users and CRUD
-    'defaultRole'        => 1
-
+    'defaultRole'        => 1,
+    // Path quickadmin folder
+    'path'        => '/public/quickadmin'
 ];
