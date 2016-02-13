@@ -24,12 +24,12 @@ SET time_zone = "+00:00";
 -- Truncate table before insert `feedly_items`
 --
 
-TRUNCATE TABLE `feedly_items`;
+TRUNCATE TABLE `news`;
 --
 -- Dumping data for table `feedly_items`
 --
 
-INSERT INTO `feedly_items` (`id`, `items_id`, `keywords`, `originId`, `title`, `published`, `content`, `visual_url`, `direction`, `language`) VALUES
+INSERT INTO `news` (`id`, `items_id`, `keywords`, `originId`, `title`, `published`, `content`, `visual_url`, `direction`, `language`) VALUES
 (1, 'A6cvoGczzHelUh0YYX6ddwv/rRfQbRKMvp/WaBlBUjc=_14d9626d885:6e0348:4c44b5be', '', 'http://feedproxy.google.com/~r/SixRevisions/~3/4Z46oZTAwzI/', 'How CSS Specificity Works', '2015-05-27 20:40:19', 'Learning about CSS specificity will give you a deeper understanding of how CSS property values are resolved.\nThe post How CSS Specificity Works appeared first on Six Revisions.', 'http://cdn.sixrevisions.com/0516-06-css-specificity-grid.jpg', 'ltr', 'en'),
 (168, 'QWzHjrLiEUqkbbCp+ViuR9kLEcykQ4Sxqh/yi63ixPk=_14de10e0335:21e2a7b:18a325ad', 'NULL', 'http://www.shabakeh-mag.com/content/721', 'بهترین ابزارهای متن‌باز مناسب طراحان گرافیکی', '2015-06-11 09:36:43', 'در بعضی حوزه‌ها، نرم‌افزارهای متن‌باز چیره شده‌اند و جایی برای نرم‌افزارهای مبتنی بر حقوق انحصاری نگذاشته‌اند. در دنیای طراحی، راه انداختن یک کسب و کار فقط با استفاده از اپ‌های متن‌باز مشکل و شاید بتوان گفت غیر ممکن است. با این تفاسیر، اپ‌هایی هستند که به شما امکان می‌دهند تا طرح‌هایی حرفه‌ای خلق کنید. در این مقاله به تعدادی از آن‌ها اشاره می‌کنیم.', 'http://www.shabakeh-mag.com/sites/default/files/styles/large/public/images/main/1394/03/1432632624.jpg', 'rtl', 'fa'),
 (2, 'VrMv9UU+Eko4+BXUwdY3ve71s/Jvt7pFexij2CJMuP0=_14d92f69b5c:15e24fa4:7af40b3e', 'NULL', 'http://www.veteknoloji.net/haber/youtube-kids-cocuklara-kotu-ornek-oluyor-76912.html', 'YouTube Kids Çocuklara Kötü Örnek Oluyor', '2015-05-27 05:52:24', ' Google tarafından yapılan güvenlik süreci hakkında YouTube Kids uygulamasının inter üzerinde erişim sağlayan çocukların gelişimine zarar verecek olan içeriklerden korumak için hayata geçirdiği projeden bahsetmişti.', 'http://www.veteknoloji.net/resimler/haberler/youtube-kids-cocuklara-kotu-ornek-oluyor.jpg', 'ltr', 'tr'),
