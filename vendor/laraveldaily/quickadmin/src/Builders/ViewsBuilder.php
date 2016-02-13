@@ -14,6 +14,7 @@ class ViewsBuilder
     private $resource;
     private $headings;
     private $columns;
+    private $hidden_d;
     private $formFieldsEdit;
     private $model;
     private $path;
@@ -92,11 +93,13 @@ class ViewsBuilder
             '$RESOURCE$',
             '$HEADINGS$',
             '$FIELDS$',
+            '$HIDDEN_D$',
         ], [
             $this->route,
             $this->resource,
             $this->headings,
-            $this->columns
+            $this->columns,
+            $this->hidden_d
         ], $template[0]);
 
         // Edit template
@@ -136,6 +139,7 @@ class ViewsBuilder
     private function buildTable()
     {
         $used     = [];
+        $hidden_d = '';
         $headings = '';
         $columns  = '';
         foreach ($this->fields as $field) {
@@ -154,6 +158,7 @@ class ViewsBuilder
                 } elseif ($field->type == 'photo') {
                     $columns .= '<td>@if($row->' . $field->title . ' != \'\')<img src="{{ asset(\'uploads/thumb\') . \'/\'.  $row->' . $field->title . " }}\">@endif</td>\r\n";
                     $used[$field->title] = $field->title;
+                    $hidden_d .= '{!! Form::hidden(\''.$field->title.'_c\', old(\''.$field->title.'\', $row->' . $field->title . ')) !!}';
                 } else {
                     $columns .= '<td>{{ $row->' . $field->title . " }}</td>\r\n";
                     $used[$field->title] = $field->title;
@@ -162,6 +167,7 @@ class ViewsBuilder
         }
         $this->headings = $headings;
         $this->columns  = $columns;
+        $this->hidden_d  = $hidden_d;
     }
 
     /**

@@ -87,10 +87,14 @@ class $CLASS$ extends Controller {
 	 *
 	 * @param  int  $id
 	 */
-	public function destroy($id)
+	public function destroy($id, Request $request)
 	{
 		$MODEL$::destroy($id);
-
+        foreach ($request->request as $key => $request_item) {
+            if (strpos($key, '_c') !== false) {
+                $this->deleteFiles($request_item);
+            }
+        }
 		return redirect()->route('admin.$COLLECTION$.index');
 	}
 

@@ -4,6 +4,7 @@
         {!! Form::file('$LABEL$') !!}
         {!! Form::hidden('$LABEL$_w', $WIDTH$) !!}
         {!! Form::hidden('$LABEL$_h', $HEIGHT$) !!}
+        {!! Form::hidden('$LABEL$_c', old('$LABEL$')) !!}
         $HELPER$
     </div>
 </div>

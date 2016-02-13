@@ -31,6 +31,7 @@
                             <td>
                                 {!! link_to_route('admin.$ROUTE$.edit', 'Edit', array($row->id), array('class' => 'btn btn-xs btn-info')) !!}
                                 {!! Form::open(array('style' => 'display: inline-block;', 'method' => 'DELETE', 'onsubmit' => 'return confirm(\'Confirm deletion\');',  'route' => array('admin.$ROUTE$.destroy', $row->id))) !!}
+                                    $HIDDEN_D$
                                     {!! Form::submit('Delete', array('class' => 'btn btn-xs btn-danger')) !!}
                                 {!! Form::close() !!}
                             </td>
