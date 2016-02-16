@@ -12,7 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	// App::setlocale($locale);
+    return view('amirhome');
+});
+
+Route::get('/{locale}', function ($locale) {
+	App::setlocale($locale);
+});
+
+Route::get('/test', function () {
+    return view('test');
 });
 
 /*
