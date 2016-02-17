@@ -11,18 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-	// App::setlocale($locale);
-    return view('amirhome');
-});
 
-Route::get('/{locale}', function ($locale) {
-	App::setlocale($locale);
-});
 
-Route::get('/test', function () {
-    return view('test');
-});
+
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -36,5 +30,16 @@ Route::get('/test', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+	Route::get('/', function () {
+		return view('amirhome');
+	});
+
+	Route::get('language/{lang}', function ($lang ='en'){
+		session()->put('locale', $lang);
+		return back();
+	});
+
+	Route::get('/test', function () {
+		 return view('test');
+	});
 });
