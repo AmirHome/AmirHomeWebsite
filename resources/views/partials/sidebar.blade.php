@@ -1,20 +1,17 @@
                 <header>
-                    <span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
-                    <h1 id="logo"><a href="#">Willis Corto</a></h1>
-                    <p>I got reprogrammed by a rogue AI<br />
-                    and now I'm totally cray</p>
+                    <span class="image avatar">
+                    <img src="http://www.gravatar.com/avatar/{{md5( 'amir.email@gmail.com' )}}?rating=PG&amp;size=300';" alt="Avatar  {{trans('general.name') }}">
+                    </span>
+                    <h1 id="logo"><a href="#">{{ trans('general.name') }}</a></h1>
+                    <p>{!! trans('general.avatar_comment') !!}</p>
                     <ul class="list-inline">
-                        <li><a href="language/en">English</a></li>
-                        <li><a href="language/tr">Turkish</a></li>
+                        <li><a href="language/en">{{ trans('general.en-language') }}</a></li>
+                        <li><a href="language/tr">{{ trans('general.tr-language') }}</a></li>
+                        <li><a href="language/fa">{{ trans('general.fa-language') }}</a></li>
                     </ul>
                 </header>
                 <nav id="nav">
-                    <ul>
-                        <li><a href="#one" class="active">About</a></li>
-                        <li><a href="#two">Things I Can Do</a></li>
-                        <li><a href="#three">A Few Accomplishments</a></li>
-                        <li><a href="#four">Contact</a></li>
-                    </ul>
+                    @yield('menus')
                 </nav>
                 <footer>
                     <ul class="icons">

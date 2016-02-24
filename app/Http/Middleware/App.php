@@ -7,7 +7,6 @@ class App {
      *
      * @array $languages
      */
-    // protected $languages = ['en','tr'];
     /**
      * Handle an incoming request.
      *

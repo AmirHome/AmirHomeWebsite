@@ -1574,7 +1574,7 @@
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #FF6D00 !important;
+			color: #4acaa8 !important;
 		}
 
 	strong, b {
@@ -1726,7 +1726,7 @@
 	}
 
 	header.major h2 {
-		color: #FF6D00;
+		color: #4acaa8;
 		font-size: 3.5em;
 	}
 
@@ -1789,7 +1789,7 @@
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #FF6D00;
+			border-color: #4acaa8;
 		}
 
 	.select-wrapper {
@@ -1899,7 +1899,7 @@
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #FF6D00;
+			border-color: #4acaa8;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2092,7 +2092,7 @@
 				}
 
 				ul.feature-icons li:before {
-					background: #FF6D00;
+					background: #4acaa8;
 					border-radius: 100%;
 					color: #ffffff;
 					display: block;
@@ -2379,7 +2379,7 @@
 		input[type="reset"].special,
 		input[type="button"].special,
 		.button.special {
-			background-color: #FF6D00;
+			background-color: #4acaa8;
 			color: #ffffff !important;
 		}
 
@@ -2387,14 +2387,14 @@
 			input[type="reset"].special:hover,
 			input[type="button"].special:hover,
 			.button.special:hover {
-				background-color: #FF8D39;
+				background-color: #5ed0b1;
 			}
 
 			input[type="submit"].special:active,
 			input[type="reset"].special:active,
 			input[type="button"].special:active,
 			.button.special:active {
-				background-color: #FF6D00;
+				background-color: #39c29d;
 			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
@@ -2449,8 +2449,8 @@
 /* Header */
 
 	#header {
-		background: #FF6D00;
-		color: #FFC864;
+		background: #4acaa8;
+		color: #d1f1e9;
 		height: 100%;
 		position: fixed;
 		text-align: center;
@@ -2468,11 +2468,11 @@
 			}
 
 		#header header p {
-			color: #FFA664;
+			color: #b6e9dc;
 		}
 
 		#header a {
-			color: #FFC864;
+			color: #d1f1e9;
 		}
 
 			#header a:hover {
@@ -2495,7 +2495,7 @@
 			}
 
 			#header > header p {
-				color: #FFC864;
+				color: #d1f1e9;
 				font-style: italic;
 				margin: 1em 0 0 0;
 			}
@@ -2513,7 +2513,7 @@
 			}
 
 				#header > footer .icons li a {
-					color: #FFA664;
+					color: #b6e9dc;
 				}
 
 		#header > nav ul {
@@ -2523,7 +2523,7 @@
 		}
 
 			#header > nav ul li {
-				border-top: solid 2px #FF8D39;
+				border-top: solid 2px #5ccfb0;
 				display: block;
 				padding: 0;
 			}
@@ -2542,7 +2542,7 @@
 
 					#header > nav ul li a.active {
 						background: #fff;
-						color: #FF6D00 !important;
+						color: #4acaa8 !important;
 					}
 
 				#header > nav ul li:first-child {
@@ -2821,7 +2821,7 @@
 					}
 
 					#titleBar .toggle:before {
-						background: #FF6D00;
+						background: #4acaa8;
 						color: #ffffff;
 						content: '\f0c9';
 						display: block;

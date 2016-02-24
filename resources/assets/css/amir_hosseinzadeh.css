@@ -1,0 +1,38 @@
+.list-inline {
+    list-style: none;
+    margin: 2.25em 0 0 0;
+    padding: 0;
+}
+
+.list-inline li {
+    display: inline;
+}
+
+#header > header {
+    padding: 2em 2em 1.25em 2em;
+}
+
+.features article .image img {
+    max-height: 177px !important;
+}
+
+.right2left {
+    direction: rtl;
+}
+
+.right2left .features article .image {
+    padding-right: 0 !important;
+    padding-left: 2.5em;
+}
+
+@media screen and (max-width: 736px) {
+    .right2left .features article .image {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .right2left .features article .image {
+        padding-left: 0;
+    }
+}
