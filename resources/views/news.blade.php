@@ -1,5 +1,13 @@
 @extends('layouts.master')
 
+@section('head_extra')
+        <link rel="stylesheet" href="{{ url('resources/assets/') }}/css/news.css" />
+@stop
+
+@section('javascripts_extra')
+            <script src="{{ url('resources/assets/') }}/js/rwm_infinite_scroll.js"></script>
+@stop
+
 @section('menus')
                     <ul>
                         <li><a href="{{ url('/')}}/#one">{{ trans('general.about') }}</a></li>
@@ -12,11 +20,11 @@
 @section('content')
   <!-- Four -->
                             <section id="four">
-                                <div class="container @if(session('locale') == 'fa') {{ 'right2left' }} @endif">
+                                <div class="container @if(app()->getLocale() == 'fa') {{ 'right2left' }} @endif">
                                     <h3>A Few Accomplishments</h3>
                                     <p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
                                     <div class="features">
-                                    	@foreach ($news as $key => $news_item)
+                                        @foreach ($news as $key => $news_item)
                                         <article>
                                             <a href="#" class="image"><img src="{{$news_item->visual_url}}" alt="{{$news_item->title}}" /></a>
                                             <div class="inner">
@@ -25,8 +33,9 @@
                                             </div>
                                             <h6><i class="fa fa-link"></i> <a target="_blank" href="{{$news_item->originId}}">Resource</a>        <i class="fa fa-calendar-o"></i> {{$news_item->published}}</h6>
                                         </article>
-                                    	@endforeach
+                                        @endforeach
                                     </div>
+                                    {!! $news->appends(['sort' => 'title'])->render() !!}
                                 </div>
                             </section>
 @stop

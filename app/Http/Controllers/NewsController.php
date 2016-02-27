@@ -15,8 +15,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-// dd(app()->getLocale());
-        $news = News::where('language', '=', session('locale'))
+/*        $news = News::where('language', '=', app()->getLocale() )
                     ->orderby('published','desc')
                     ->get(['items_id',
                         'keywords',
@@ -26,7 +25,21 @@ class NewsController extends Controller
                         'content',
                         'visual_url',
                         'direction',
-                        'language']);
+                        'language']);*/
+
+        $news = News::where('language', '=', app()->getLocale() )
+                    ->orderby('published','desc')
+                    ->select(['items_id',
+                        'keywords',
+                        'originId',
+                        'title',
+                        'published',
+                        'content',
+                        'visual_url',
+                        'direction',
+                        'language'])
+                    ->paginate(5);
+
 
         return view('news', compact('news'));
     }

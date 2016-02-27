@@ -16,7 +16,11 @@ class App {
      */
     public function handle($request, Closure $next)
     {
-        app()->setLocale(session('locale'));
+        // dd(app()->getLocale(), session('locale'));
+        if ( session('locale') ) {
+            // app()->getLocale()
+            app()->setLocale(session('locale'));
+        }
         return $next($request);
     }
 }

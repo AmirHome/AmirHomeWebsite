@@ -3,7 +3,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
         <link rel="stylesheet" href="{{ url('resources/assets/') }}/css/main.css" />
-        <link rel="stylesheet" href="{{ url('resources/assets/') }}/css/amir_hosseinzadeh.css" />
         <!--[if lte IE 8]><link rel="stylesheet" href="{{ url('resources/assets/') }}/css/ie8.css" /><![endif]-->
 		
 		<link rel="apple-touch-icon" sizes="57x57" href="{{ url('resources/images/icons') }}/apple-touch-icon-57x57.png">
@@ -26,3 +25,4 @@
 		<meta name="msapplication-TileColor" content="#00a300">
 		<meta name="msapplication-TileImage" content="{{ url('resources/images/icons') }}/mstile-144x144.png">
 		<meta name="theme-color" content="#ffffff">
+		
