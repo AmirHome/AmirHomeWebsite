@@ -25,10 +25,13 @@
 
 
     $(document).ready(function() {
+    //hides the default paginator
+    $('ul.pagination:visible:first').hide();
+ 
     var loading_options = {
         finishedMsg: "<div class='end-msg'>Congratulations! You've reached the end of the internet</div>",
-        msgText: "<div class='center'>Loading news items...</div>",
-        img: "/assets/img/ajax-loader.gif"
+        msgText: "Loading ...",
+        img: 'resources/images/icons/loading-grey.gif'
     };
 
     $('#scroll').infinitescroll({

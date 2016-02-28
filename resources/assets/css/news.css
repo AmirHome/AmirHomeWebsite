@@ -1,6 +1,13 @@
-small{
-    text-align: center;
+/*
+Loading Scroll 
+*/
+
+#infscr-loading div{
+    display: inline-block;
+    position: absolute;
+    margin: 18px 5px;
 }
+
 .list-inline {
     list-style: none;
     margin: 2.25em 0 0 0;
