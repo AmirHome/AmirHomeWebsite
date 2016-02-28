@@ -34,6 +34,7 @@ Route::group(['middleware' => ['web']], function () {
         return back();
     });
 
+
     Route::get('/test', function () {
         return view('test');
     });

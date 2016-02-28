@@ -38,7 +38,7 @@ class NewsController extends Controller
                         'visual_url',
                         'direction',
                         'language'])
-                    ->paginate(5);
+                    ->paginate(3);
 
 
         return view('news', compact('news'));

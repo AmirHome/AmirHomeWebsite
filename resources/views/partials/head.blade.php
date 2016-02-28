@@ -4,7 +4,8 @@
         <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
         <link rel="stylesheet" href="{{ url('resources/assets/') }}/css/main.css" />
         <!--[if lte IE 8]><link rel="stylesheet" href="{{ url('resources/assets/') }}/css/ie8.css" /><![endif]-->
-		
+        <link rel="stylesheet" href="{{ url('resources/assets/') }}/css/news.css" />
+
 		<link rel="apple-touch-icon" sizes="57x57" href="{{ url('resources/images/icons') }}/apple-touch-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="{{ url('resources/images/icons') }}/apple-touch-icon-60x60.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="{{ url('resources/images/icons') }}/apple-touch-icon-72x72.png">
