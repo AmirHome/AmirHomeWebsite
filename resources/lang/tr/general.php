@@ -9,5 +9,6 @@ return [
     'about' => 'HAKKIMINDA',
     'contact' => 'İletişim',
     'skill' => 'Beceri ve Cirolar',
+    'favorite' => 'benim favorim',
     'avatar_comment' => '✔ Web Programcı<br />✔ MySQL Administration<br />Artik Beceri ..',
 ];
