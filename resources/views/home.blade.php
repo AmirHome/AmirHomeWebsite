@@ -1,12 +1,11 @@
 @extends('layouts.master')
 
-
 @section('menus')
                     <ul>
                         <li><a href="#one" class="active">{{ trans('general.about') }}</a></li>
                         <li><a href="#two">{{ trans('general.skill') }}</a></li>
                         <li><a href="#three">{{ trans('general.contact') }}</a></li>
-                        <li><a href="{{ url('/news')}}#four">A Few Accomplishments</a></li>
+                        <li><a href="{{ url('/favorites')}}">{{ trans('general.favorite') }}</a></li>
                     </ul>
 @stop
 

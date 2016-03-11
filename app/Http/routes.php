@@ -27,7 +27,8 @@ Route::group(['middleware' => ['web']], function () {
         return view('home');
     });
 
-    Route::get('/news','NewsController@index');
+    Route::get('/favorites','NewsController@index');
+    Route::get('/favorite/{slug}','NewsController@show');
 
     Route::get('language/{lang}', function ($lang = 'en') {
         session()->put('locale', $lang);

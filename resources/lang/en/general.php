@@ -9,5 +9,6 @@ return [
     'about' => 'About',
     'contact' => 'Contact',
     'skill' => 'Skills & Endorsements',
+    'favorite' => 'My Favorite',
     'avatar_comment' => '✔ Web Developer <br /> ✔ MySQL Administration <br /> Other Skills ..',
 ];
