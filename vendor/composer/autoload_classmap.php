@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddSlugUpdateNewsTable' => $baseDir . '/database/migrations/2016_03_27_145444_add_slug_update_news_table.php',
     'CreateMenusTable' => $baseDir . '/database/migrations/2015_10_10_000000_create_menus_table.php',
     'CreateNewsTable' => $baseDir . '/database/migrations/2016_01_12_213628_create_news_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
@@ -518,5 +519,6 @@ return array(
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
+    'UniqueTitleUpdateNewsTable' => $baseDir . '/database/migrations/2016_03_27_182658_unique_title_update_news_table.php',
     'UpdateUsersTable' => $baseDir . '/database/migrations/2015_10_10_000000_update_users_table.php',
 );

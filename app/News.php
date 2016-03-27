@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 use Laraveldaily\Quickadmin\Observers\UserActionsObserver;
 
 use Carbon\Carbon; 
-
+
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class News extends Model {
@@ -25,6 +25,7 @@ class News extends Model {
           'keywords',
           'originId',
           'title',
+          'slug',
           'published',
           'content',
           'visual_url',

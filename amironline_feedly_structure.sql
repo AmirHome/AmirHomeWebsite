@@ -1,66 +1,38 @@
--- phpMyAdmin SQL Dump
--- version 4.4.11
--- http://www.phpmyadmin.net
---
--- Host: localhost
--- Generation Time: Jan 12, 2016 at 11:56 PM
--- Server version: 5.5.31
--- PHP Version: 5.5.27
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `amironline_feedly`
---
-
+-- --------------------------------------------------------
+-- Host:                         127.0.0.1
+-- Server version:               5.6.26 - MySQL Community Server (GPL)
+-- Server OS:                    Win32
+-- HeidiSQL Version:             9.3.0.4984
 -- --------------------------------------------------------
 
---
--- Table structure for table `feedly_items`
---
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
-CREATE TABLE IF NOT EXISTS `feedly_items` (
-  `id` int(11) unsigned NOT NULL COMMENT 'id++',
-  `items_id` varchar(255) NOT NULL COMMENT 'کد منحصربفردي که خود فيدلي ميده',
-  `keywords` varchar(511) DEFAULT NULL COMMENT 'تگ هاي مربوط به خبر',
-  `originId` varchar(255) NOT NULL COMMENT 'آدرس اينترنتي خبر',
-  `title` varchar(255) NOT NULL COMMENT 'عنوان',
-  `published` datetime NOT NULL COMMENT 'زمان انتشار خبر',
-  `content` text NOT NULL COMMENT 'متن خبر',
-  `visual_url` varchar(255) DEFAULT NULL COMMENT 'تصاوير مربوط به خبر',
-  `direction` enum('rtl','ltr') DEFAULT NULL COMMENT 'جهت نگارش خبر',
-  `language` enum('fa','en','tr') DEFAULT NULL COMMENT 'زبان خبر'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='پست هاي فيلدي';
+-- Dumping structure for table amironline_feedly.news
+DROP TABLE IF EXISTS `news`;
+CREATE TABLE IF NOT EXISTS `news` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `items_id` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `keywords` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `originId` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `slug` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `published` datetime DEFAULT NULL,
+  `content` text COLLATE utf8_unicode_ci,
+  `visual_url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `direction` enum('rtl','ltr') COLLATE utf8_unicode_ci DEFAULT NULL,
+  `language` enum('fa','en','tr') COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `news_slug_unique` (`slug`),
+  UNIQUE KEY `title` (`title`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `feedly_items`
---
-ALTER TABLE `feedly_items`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `items_id_2` (`items_id`),
-  ADD KEY `title` (`title`),
-  ADD KEY `items_id` (`items_id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `feedly_items`
---
-ALTER TABLE `feedly_items`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id++';
+-- Data exporting was unselected.
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

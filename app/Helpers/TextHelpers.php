@@ -1,17 +1,24 @@
 <?php
 
-function extra_slug($str)
+function turkish_slug($str)
+{
+    $str = turkish_letters($str);
+    return str_slug($str);
+}
+
+function persian_slug($str)
 {
     $str = mb_strtolower(trim($str), 'UTF-8');
     $str = preg_replace('/[[:^alnum:]]/iu', ' ', $str);
     $str = trim($str);
-    return preg_replace('/\s+/', '-', $str);
+    $str = preg_replace('/\s+/', '-', $str);
+    return ($str);
 }
 
 function persian_normalizer($str)
 {
     $str = numbers($str);
-    return letters($str);
+    return persian_letters($str);
 }
 
 function ar_numbers($numbers)
@@ -47,13 +54,26 @@ function numbers($numbers)
 }
 
 /**
+ * Replace Turkish character with English character.
+ * This method covers most character in arabic character table.
+ *
+ * @param string $text
+ * @return string
+ */
+function turkish_letters($text){
+    $from   = ['Ş', 'ş', 'İ', 'ı', 'Ç', 'ç', 'Ü', 'ü', 'Ö', 'ö' , 'Ğ', 'ğ' ];
+    $to     = ['S', 's', 'I', 'i', 'C', 'c', 'U', 'u', 'O', 'o' , 'G', 'g' ];
+    return (string) str_replace($from, $to, $text);
+}
+
+/**
  * Replace none persian character with persian character.
  * This method covers most character in arabic character table.
  *
  * @param string $text
  * @return string
  */
-function letters($text)
+function persian_letters($text)
 {
     $from   = $to   = array();
     $from[] = array('؆', '؇', '؈', '؉', '؊', '؍', '؎', 'ؐ', 'ؑ', 'ؒ', 'ؓ', 'ؔ', 'ؕ',

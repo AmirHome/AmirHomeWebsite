@@ -29,6 +29,7 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/favorites','NewsController@index');
     Route::get('/favorite/{slug}','NewsController@show');
+    Route::get('/bulid_slugs','NewsController@bulid_slugs');
 
     Route::get('language/{lang}', function ($lang = 'en') {
         session()->put('locale', $lang);
